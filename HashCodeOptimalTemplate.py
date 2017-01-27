@@ -4,7 +4,8 @@ itIsTheFirstLine = True     #This variable is about the input line. If the line 
 T=0     #The number of lines with usefull Data. the number of tierations.
 result = "Not any result right now" #this is used for the result wich is printed in the end of the code with the default value.
 countForT = 0 #this is the count vairiable that helps to check that the iterations are not more than the predefined T variable.
-f = open('output.txt','w')
+fileOutput = open('output.txt','w')
+fileForInput =  "happyinput.in"
 
 
 #the mainCheckFunction() function is doing the necessary checking before the mainCalculativFunction().
@@ -30,12 +31,19 @@ def iterationsCheck(hereGoesTheCountForTParameter):
     if hereGoesTheCountForTParameter >= int(T):
         return True
     
+#My first thought was to use "for in" loop but after using it I figured out that the use of Range is the best solution.
+#As I know, a loop with range is more efficient than the typical "for in" loop.
+#Use this function in case of sorting, or in the case of temparated array. you will not regret it.    
+def printFromArray(Arrayname, probablytheTVariable):
+    for i in range(int(probablytheTVariable)):
+        print(str(Arrayname[i]))
+
     
 #The main iteration, (AKA the main loop), now is the main() function. 
 #The separation of code to functions blocks keeps the template simple and clear.    
 def main():
     global countForT
-    for line in fileinput.input("happyinput.in"):
+    for line in fileinput.input(fileForInput):
         print("itIsTheFirstLine now is " + str(itIsTheFirstLine))
         print("itIsTheFirstLine now is " + str(itIsTheFirstLine) end='\n' file=f)
         if itIsTheFirstLine == True:
