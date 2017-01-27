@@ -4,8 +4,8 @@ itIsTheFirstLine = True     #This variable is about the input line. If the line 
 T=0     #The number of lines with usefull Data. the number of tierations.
 result = "Not any result right now" #this is used for the result wich is printed in the end of the code with the default value.
 countForT = 0 #this is the count vairiable that helps to check that the iterations are not more than the predefined T variable.
-fileOutput = open('output.txt','w')
-fileForInput =  "happyinput.in"
+fileForOutput = open('output.txt','w')
+fileForInput = open('input.in','r')
 
 
 #the mainCheckFunction() function is doing the necessary checking before the mainCalculativFunction().
@@ -43,9 +43,9 @@ def printFromArray(Arrayname, probablytheTVariable):
 #The separation of code to functions blocks keeps the template simple and clear.    
 def main():
     global countForT
-    for line in fileinput.input(fileForInput):
+    for N in fileForInput:
         print("itIsTheFirstLine now is " + str(itIsTheFirstLine))
-        print("itIsTheFirstLine now is " + str(itIsTheFirstLine) end='\n' file=f)
+        #print("itIsTheFirstLine now is " + str(itIsTheFirstLine) end='\n' file=f)
         if itIsTheFirstLine == True:
             firstLineCorrection(N)
         else:
@@ -65,6 +65,7 @@ if __name__ == "__main__": main()
 #print("Case #", str(unregisteredcase), ": ", number_string2, " ",sep="", end='\n', file=f)
 
 
-f.close()
+fileForInput.close()
+fileForOutput.close()
 print("That's all folks!")
 
