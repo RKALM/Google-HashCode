@@ -59,9 +59,12 @@ def main():
             print("the T which represent the number of lines with input data, now is " + str(T)) 
             fileForOutput.write("the T which represent the number of lines with input data, now is " + str(T))       
             if iterationsCheck(countForT):
+                #here add code when the answer comes in the end as a final result.
                 print("the result of the main calculative fuction know as mainCalculativFunction() now is " + result)
                 fileForOutput.write("the result of the main calculative fuction know as mainCalculativFunction() now is " + result)
             else:
+                #Here add code if there are many answers that are coming separately with every iteration.
+                #here is the best location for the printFromArray()function.
                 print ("the N now which is the value of the last input now is " + str(N))
                 fileForOutput.write("the N now which is the value of the last input now is " + str(N))
                 
