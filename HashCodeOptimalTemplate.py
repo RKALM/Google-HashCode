@@ -45,17 +45,21 @@ def main():
     global countForT
     for N in fileForInput:
         print("itIsTheFirstLine now is " + str(itIsTheFirstLine))
+        fileForOutput.write("itIsTheFirstLine now is " + str(itIsTheFirstLine))
         #print("itIsTheFirstLine now is " + str(itIsTheFirstLine) end='\n' file=f)
         if itIsTheFirstLine == True:
             firstLineCorrection(N)
         else:
             result = mainCalculativFunction(N)
             countForT += 1
-            print("the T which represent the number of lines with input data, now is " + str(T))        
+            print("the T which represent the number of lines with input data, now is " + str(T)) 
+            fileForOutput.write("the T which represent the number of lines with input data, now is " + str(T))       
             if iterationsCheck(countForT):
                 print("the result of the main calculative fuction know as mainCalculativFunction() now is " + result)
+                fileForOutput.write("the result of the main calculative fuction know as mainCalculativFunction() now is " + result)
             else:
                 print ("the N now which is the value of the last input now is " + str(N))
+                fileForOutput.write("the N now which is the value of the last input now is " + str(N))
                 
 if __name__ == "__main__": main()
 
