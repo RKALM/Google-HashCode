@@ -82,8 +82,8 @@ def printFromArray(Arrayname, probablytheTVariable):
 
 
 #Helper function to calculate distance between 2 points
-def distance(p, q):
-    return math.sqrt((p[0]-q[0])**2 + (p[1]-q[1])**2)
+def distance(p1, q1, p2, q2):
+    return math.sqrt((p1-q1)**2 + (p2-q2)**2)
 
 #################################
 #OBJECT ORIENTED FUNCTIONS(END)
@@ -100,6 +100,21 @@ def distance(p, q):
 #CLASSES(END)
 #############
 
+class Object:
+    def __init__(self):
+        print("I am an object and i just been constructed")
+        
+class Cote(object):
+    def __init__(self):
+        print("I am an cote and i just been constructed")
+        
+class Chicken(Cote):
+    def __init__(self):
+        print("Winner! Winner! Chicken dinner!")
+        
+class Egg(Cote):
+    def __init__(self):
+        print("Hello sir! I am an egg and the answer for everything is 42")
 
 
 #######################
