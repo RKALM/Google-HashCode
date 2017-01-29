@@ -1,3 +1,24 @@
+#################################
+#LIBRARIES(START)
+#################################
+
+from __future__ import division
+import math
+import random
+#import sys
+#import os
+#import datetime
+
+##############
+#LIBRARIES(END)
+##############
+
+
+
+
+#########################
+#GLOBAL VARIABBLES(START)
+#########################
 itIsTheFirstLine = True     #This variable is about the input line. If the line is the first the variable itIsTheFirstLine is True.
 T=0     #The number of lines with usefull Data. the number of tierations.
 result = "Not any result right now" #this is used for the result wich is printed in the end of the code with the default value.
@@ -5,7 +26,15 @@ testSum = 0 #This is used to make the mainCheckFunction() bit more interesting b
 countForT = 0 #this is the count vairiable that helps to check that the iterations are not more than the predefined T variable.
 fileForOutput = open('output.txt','w')
 fileForInput = open('input.in','r')
+#######################
+#OGLOBAL VARIABLES(END)
+#######################
 
+
+
+##########################
+#TEMPLATE FUNCTIONS(START)
+##########################
 
 #the mainCheckFunction() function is doing the necessary checking before the mainCalculativFunction().
 #there is always something to check
@@ -39,7 +68,33 @@ def iterationsCheck(hereGoesTheCountForTParameter):
 def printFromArray(Arrayname, probablytheTVariable):
     for i in range(int(probablytheTVariable)):
         print(str(Arrayname[i]))
+        
+##########################
+#TEMPLATE FUNCTIONS(END)
+##########################
+        
+        
+#################################
+#OBJECT ORIENTED FUNCTIONS(START)
+#################################
+#stuff that help objects to do stuff.
+#Those function are meant to be only inside the mainCalculativFunction()
 
+
+#Helper function to calculate distance between 2 points
+def distance(p, q):
+    return math.sqrt((p[0]-q[0])**2 + (p[1]-q[1])**2)
+
+#################################
+#OBJECT ORIENTED FUNCTIONS(END)
+#################################
+
+
+
+
+#######################
+#MAIN() FUNCTION(START)
+#######################
     
 #The main iteration, (AKA the main loop), now is the main() function. 
 #The separation of code to functions blocks keeps the template simple and clear.    
@@ -67,6 +122,10 @@ def main():
                 fileForOutput.write("the N now which is the value of the last input now is " + str(N))
                 
 if __name__ == "__main__": main()
+
+#####################
+#MAIN() FUNCTION(END)
+#####################
 
 
 
