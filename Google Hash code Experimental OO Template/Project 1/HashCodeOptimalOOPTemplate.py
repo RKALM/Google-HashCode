@@ -24,6 +24,7 @@ T=0     #The number of lines with usefull Data. the number of tierations.
 result = "Not any result right now" #this is used for the result wich is printed in the end of the code with the default value.
 testSum = 0 #This is used to make the mainCheckFunction() bit more interesting but making the function to work as add function.
 countForT = 0 #this is the count vairiable that helps to check that the iterations are not more than the predefined T variable.
+spliterFunctionsArray = []
 fileForOutput = open('output.txt','w')
 fileForInput = open('input.in','r')
 #######################
@@ -44,7 +45,7 @@ def mainCheckFunction(checkFunctionsProperty):
 
 #The function mainCalculativFunction() solves the logical problem of the exercise.
 #Now it works like a SUM function.       
-def mainCalculativFunction(inputProperty):
+def mainCalculativFunction(inputProperty, loopsIteration):
     global testSum #This is used to make the mainCheckFunction() bit more interesting but making it to work as add function.
     if mainCheckFunction(True):
         testSum = int(inputProperty) + testSum
@@ -68,6 +69,13 @@ def iterationsCheck(hereGoesTheCountForTParameter):
 def printFromArray(Arrayname, probablytheTVariable):
     for i in range(int(probablytheTVariable)):
         print(str(Arrayname[i]))
+        
+#fills a two-dimensional array with the vale N, (the line from the input).
+#it needs to get called for every line from the main interation, (for every N)        
+def spliterFunction(strValueFromN):
+    global spliterFunctionsArray
+    spliterFunctionsArray.append(strValueFromN.split(' ')) 
+
         
 ##########################
 #TEMPLATE FUNCTIONS(END)
