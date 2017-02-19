@@ -71,10 +71,19 @@ def printFromArray(Arrayname, probablytheTVariable):
         print(str(Arrayname[i]))
         
 #fills a two-dimensional array with the value N, (the line from the input).
-#it needs to get called for every line from the main iteration, (for every N)        
+#it needs to get called for every line from the main iteration, (for every N) 
+#it needs to work before the twoDimentionalArrayHandler()
+#it works optimaly inside the mainCalculativFunction()       
 def spliterFunction(strValueFromN):
     global spliterFunctionsArray
     spliterFunctionsArray.append(strValueFromN.split(' ')) 
+    
+#this is the best way to handle the second dimention of two dimentional array
+#it needs to work after the spliterFunction()
+#it works optimaly inside the mainCalculativFunction()
+#initialy works as sum function
+def twoDimentionalArrayHandler(arrayNameParameter, Iterationsnumber):
+    return int(arrayNameParameter[Iterationsnumber][0]) + int(arrayNameParameter[Iterationsnumber][1])
 
         
 ##########################
