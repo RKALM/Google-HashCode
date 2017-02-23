@@ -24,7 +24,6 @@ T=0     #The number of lines with usefull Data. the number of tierations.
 result = "Not any result right now" #this is used for the result wich is printed in the end of the code with the default value.
 testSum = 0 #This is used to make the mainCheckFunction() bit more interesting but making the function to work as add function.
 countForT = 0 #this is the count vairiable that helps to check that the iterations are not more than the predefined T variable.
-countForDwnldN = 0
 spliterFunctionsArray = []
 fileForOutput = open('output.txt','w')
 fileForInput = open('input.in','r')
