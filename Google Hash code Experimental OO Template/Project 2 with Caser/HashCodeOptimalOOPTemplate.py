@@ -100,6 +100,10 @@ def caser(value1, value2):
     else:
         dwnldTArray.append(value1)
         dwnldDArray.append(value2)
+        countForDwnldN = countForDwnldN - 1
+        
+def insideCaseCalculation(dwnldNparam, dwnldKparam):
+    pass
         
 ##########################
 #TEMPLATE FUNCTIONS(END)
