@@ -1,0 +1,10 @@
+itIsTheFirstLine now is TrueitIsTheFirstLine now is Falsethe T which represent the number of lines with input data, now is 5
+the N now which is the value of the last input now is 90
+itIsTheFirstLine now is Falsethe T which represent the number of lines with input data, now is 5
+the N now which is the value of the last input now is 80
+itIsTheFirstLine now is Falsethe T which represent the number of lines with input data, now is 5
+the N now which is the value of the last input now is 70
+itIsTheFirstLine now is Falsethe T which represent the number of lines with input data, now is 5
+the N now which is the value of the last input now is 60
+itIsTheFirstLine now is Falsethe T which represent the number of lines with input data, now is 5
+the result of the main calculative fuction know as mainCalculativFunction() now is 350

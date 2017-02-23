@@ -45,7 +45,7 @@ def mainCheckFunction(checkFunctionsProperty):
 
 #The function mainCalculativFunction() solves the logical problem of the exercise.
 #Now it works like a SUM function.       
-def mainCalculativFunction(inputProperty, loopsIteration):
+def mainCalculativFunction(inputProperty):
     global testSum #This is used to make the mainCheckFunction() bit more interesting but making it to work as add function.
     if mainCheckFunction(True):
         testSum = int(inputProperty) + testSum
