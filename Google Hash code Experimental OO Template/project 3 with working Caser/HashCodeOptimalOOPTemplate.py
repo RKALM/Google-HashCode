@@ -30,6 +30,7 @@ countForT = 0 #this is the count vairiable that helps to check that the iteratio
 i = 0
 countForDwnldN = 0
 dwnldK = 0
+caserArray = []
 dwnldTArray = []
 dwnldDarray = []
 spliterFunctionsArray = []
@@ -226,6 +227,47 @@ def requestArrayCollector(inputFromN):
 def requestArrayReapairer(howManyRequestsParameter):
     if len(requestArray) > int(howManyRequestsParameter):
         requestArray.pop()
+
+
+# it needs to run after the caser()
+# it repairs if necessary, (and if possible), the caserArray
+# it repairs caserArray by removing the empty trailer.
+
+def caser(inputFromN, inputForI):
+    global countForDwnldN, dwnldK, caserArray, i
+    i = inputForI
+    print("caser started")
+    print("i now is " + str(i))
+    caserTemporalValues = ""
+    caserTemporalValues = inputFromN.split()
+    if int(countForDwnldN) == 0:
+        print("countForDwnldN is 0")
+        print("caserTemporalValues is " + str(caserTemporalValues))
+        dwnldK = caserTemporalValues[0]
+        print("dwnldK is " + str(dwnldK))
+        countForDwnldN = caserTemporalValues[1]
+        print("countForDwnldN is " + str(countForDwnldN))
+        i = int(i) + 1
+        caserArray.append([])
+        caserArray[i - 1].append(dwnldK)
+    else:
+        print("countForDwnldN is NOT 0")
+        print("countForDwnldN is " + str(countForDwnldN))
+        print("i is " + str(i))
+        caserArray[i - 1].append(caserTemporalValues)
+        countForDwnldN = int(countForDwnldN) - 1
+        print("caserArray is " + str(caserArray[i - 1]))
+        # i = int(i) + 1
+
+
+# this the function that break the stream to cases
+# this function is inspired by the DWNLD problem on codechef
+# please use global i and countForDwnldN outside the function
+# also use the repair function to repair the caserArray
+
+def caseReapairer(howManyCasesParameter):
+    if len(caserArray) > int(howManyCasesParameter):
+        caserArray.pop()
 
 
 # attended for the caser() function.
